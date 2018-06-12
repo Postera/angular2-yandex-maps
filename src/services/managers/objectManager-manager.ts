@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Observer } from 'rxjs/Observer';
 
 import { YaObjectManager } from './../../directives/objectManager';
