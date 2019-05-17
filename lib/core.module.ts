@@ -9,22 +9,23 @@ import { BROWSER_GLOBALS_PROVIDERS } from './utils/browser-globals';
 export * from './ya-maps-types';
 
 /**
- * @internal
+ * The angular-ya-maps core module. Contains all Directives/Services/Pipes
+ * of the core module. Please use `YaCoreModule.forRoot()` in your app module.
  */
-export function coreDirectives() {
-  return [
+@NgModule({
+  declarations: [
     YaMap,
     YaMarker,
     YaClaster,
     YaObjectManager
-  ];
-}
-
-/**
- * The angular-ya-maps core module. Contains all Directives/Services/Pipes
- * of the core module. Please use `YaCoreModule.forRoot()` in your app module.
- */
-@NgModule({ declarations: coreDirectives(), exports: coreDirectives() })
+  ],
+  exports: [
+    YaMap,
+    YaMarker,
+    YaClaster,
+    YaObjectManager
+  ]
+})
 export class YaCoreModule {
   /**
    * Please use this method when you register the module at the root level.
