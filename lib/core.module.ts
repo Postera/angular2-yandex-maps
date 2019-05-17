@@ -34,7 +34,7 @@ export class YaCoreModule {
       ngModule: YaCoreModule,
       providers: [
         ...BROWSER_GLOBALS_PROVIDERS, { provide: YaMapsAPILoader, useClass: YaMapsAPILoader }
-      ],
+      ]
     };
   }
 }
